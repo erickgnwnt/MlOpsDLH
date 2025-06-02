@@ -1,0 +1,16 @@
+{"time":"2025-06-02T09:01:32.5799599+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250602_090132-5w2jktjx\\logs\\debug-core.log"}
+{"time":"2025-06-02T09:01:33.3086619+07:00","level":"INFO","msg":"created new stream","id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:33.3086619+07:00","level":"INFO","msg":"stream: started","id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:33.3086619+07:00","level":"INFO","msg":"sender: started","stream_id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:33.3086619+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:33.3086619+07:00","level":"INFO","msg":"handler: started","stream_id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:33.7611508+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T09:01:38.380683+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T09:01:38.380683+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T09:01:39.3851696+07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-5w2jktjx-logistic_model.pkl","runtime_seconds":1.0688153,"subtasks":[{"desc":"logistic_model.pkl","runtime_seconds":0.034476,"progress":"1.0KB/1.0KB"}]}],"total_operations":1}}
+{"time":"2025-06-02T09:01:40.7481867+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T09:01:41.1854716+07:00","level":"INFO","msg":"stream: closing","id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:41.1854716+07:00","level":"INFO","msg":"handler: closed","stream_id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:41.1854716+07:00","level":"INFO","msg":"sender: closed","stream_id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:41.1854716+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"5w2jktjx"}
+{"time":"2025-06-02T09:01:41.1867919+07:00","level":"INFO","msg":"stream: closed","id":"5w2jktjx"}

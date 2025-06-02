@@ -1,0 +1,12 @@
+Training model...
+
+Starting Hyperparameter Tuning...
+Best Hyperparameters: {'C': 100, 'max_iter': 1000, 'solver': 'lbfgs'}
+Best Accuracy: 0.83125
+Final model saved as best_logistic_model.pkl
+
+Evaluating model performance...
+
+Cross-validation scores: [0.875   0.71875 0.78125 0.90625 0.875  ]
+Mean CV Accuracy: 0.83125
+Standard Deviation: 0.0701560760020114
