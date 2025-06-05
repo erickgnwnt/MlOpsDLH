@@ -1,0 +1,1 @@
+{"_timestamp":1.7490120560212471e+09,"_runtime":1.1337723,"_wandb":{"runtime":1},"_step":0,"Logistic Regression Evaluation Error":"This LogisticRegression instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator."}

@@ -1,0 +1,16 @@
+training:
+  epochs: 10
+model:
+  name: logistic_regression
+  logistic_regression:
+    C: 1.0
+    solver: lbfgs
+    max_iter: 5000
+  random_forest:
+    n_estimators: 100
+    max_depth: null
+  knn:
+    n_neighbors: 5
+    weights: uniform
+data:
+  path: data.csv

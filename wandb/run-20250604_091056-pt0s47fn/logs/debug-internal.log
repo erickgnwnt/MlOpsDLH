@@ -1,0 +1,16 @@
+{"time":"2025-06-04T09:10:56.3949367+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250604_091056-pt0s47fn\\logs\\debug-core.log"}
+{"time":"2025-06-04T09:10:56.6665524+07:00","level":"INFO","msg":"created new stream","id":"pt0s47fn"}
+{"time":"2025-06-04T09:10:56.6670912+07:00","level":"INFO","msg":"handler: started","stream_id":"pt0s47fn"}
+{"time":"2025-06-04T09:10:56.6670912+07:00","level":"INFO","msg":"sender: started","stream_id":"pt0s47fn"}
+{"time":"2025-06-04T09:10:56.6670912+07:00","level":"INFO","msg":"stream: started","id":"pt0s47fn"}
+{"time":"2025-06-04T09:10:56.6670912+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"pt0s47fn"}
+{"time":"2025-06-04T09:10:57.0666641+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T09:10:58.1188153+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T09:10:58.1188153+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T09:10:59.1256237+07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-pt0s47fn-LogisticRegressionConfusionMatrix","runtime_seconds":1.2528186,"subtasks":[{"desc":"Logistic Regression Confusion Matrix.table.json","runtime_seconds":0.170465,"progress":"521B/521B"}]}],"total_operations":1}}
+{"time":"2025-06-04T09:11:01.4837883+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T09:11:01.8913118+07:00","level":"INFO","msg":"stream: closing","id":"pt0s47fn"}
+{"time":"2025-06-04T09:11:01.8913118+07:00","level":"INFO","msg":"handler: closed","stream_id":"pt0s47fn"}
+{"time":"2025-06-04T09:11:01.8913118+07:00","level":"INFO","msg":"sender: closed","stream_id":"pt0s47fn"}
+{"time":"2025-06-04T09:11:01.8913118+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"pt0s47fn"}
+{"time":"2025-06-04T09:11:01.891869+07:00","level":"INFO","msg":"stream: closed","id":"pt0s47fn"}

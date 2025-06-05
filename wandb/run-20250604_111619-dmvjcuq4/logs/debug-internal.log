@@ -1,0 +1,16 @@
+{"time":"2025-06-04T11:16:19.8411836+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250604_111619-dmvjcuq4\\logs\\debug-core.log"}
+{"time":"2025-06-04T11:16:20.1122693+07:00","level":"INFO","msg":"created new stream","id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:20.1122693+07:00","level":"INFO","msg":"stream: started","id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:20.1122693+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:20.1122693+07:00","level":"INFO","msg":"handler: started","stream_id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:20.1122693+07:00","level":"INFO","msg":"sender: started","stream_id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:20.4281336+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T11:16:21.5304415+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T11:16:21.5304415+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T11:16:22.5458666+07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-dmvjcuq4-LogisticRegressionConfusionMatrix","runtime_seconds":1.2082363,"subtasks":[{"desc":"Logistic Regression Confusion Matrix.table.json","runtime_seconds":0.063636,"progress":"521B/521B"}]}],"total_operations":1}}
+{"time":"2025-06-04T11:16:23.8452651+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T11:16:24.2694869+07:00","level":"INFO","msg":"stream: closing","id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:24.2694869+07:00","level":"INFO","msg":"handler: closed","stream_id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:24.2694869+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:24.2714924+07:00","level":"INFO","msg":"sender: closed","stream_id":"dmvjcuq4"}
+{"time":"2025-06-04T11:16:24.2714924+07:00","level":"INFO","msg":"stream: closed","id":"dmvjcuq4"}
