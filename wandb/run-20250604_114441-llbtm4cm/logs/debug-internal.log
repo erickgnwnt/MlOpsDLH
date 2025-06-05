@@ -1,0 +1,16 @@
+{"time":"2025-06-04T11:44:41.5530416+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250604_114441-llbtm4cm\\logs\\debug-core.log"}
+{"time":"2025-06-04T11:44:41.9702088+07:00","level":"INFO","msg":"created new stream","id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:41.9707138+07:00","level":"INFO","msg":"stream: started","id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:41.9711168+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:41.971636+07:00","level":"INFO","msg":"handler: started","stream_id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:41.9727399+07:00","level":"INFO","msg":"sender: started","stream_id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:42.4446665+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T11:44:42.7390704+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T11:44:42.7390704+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T11:44:43.7594951+07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.0723484,"progress":"175B/175B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.0723484,"progress":"251B/251B"}],"total_operations":2}}
+{"time":"2025-06-04T11:44:44.3097831+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T11:44:44.6316514+07:00","level":"INFO","msg":"stream: closing","id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:44.6316514+07:00","level":"INFO","msg":"handler: closed","stream_id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:44.6316514+07:00","level":"INFO","msg":"sender: closed","stream_id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:44.6316514+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"llbtm4cm"}
+{"time":"2025-06-04T11:44:44.6316514+07:00","level":"INFO","msg":"stream: closed","id":"llbtm4cm"}

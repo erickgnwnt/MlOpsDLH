@@ -1,0 +1,1 @@
+{"_wandb":{"runtime":0},"_timestamp":1.7490100860778077e+09,"_runtime":0.7741371,"_step":0,"KNN Training Error":"The 'weights' parameter of KNeighborsClassifier must be a str among {'distance', 'uniform'}, a callable or None. Got ['uniform', 'distance'] instead."}

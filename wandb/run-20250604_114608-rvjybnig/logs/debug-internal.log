@@ -1,0 +1,16 @@
+{"time":"2025-06-04T11:46:08.3311282+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250604_114608-rvjybnig\\logs\\debug-core.log"}
+{"time":"2025-06-04T11:46:08.7330281+07:00","level":"INFO","msg":"created new stream","id":"rvjybnig"}
+{"time":"2025-06-04T11:46:08.7330281+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"rvjybnig"}
+{"time":"2025-06-04T11:46:08.7330281+07:00","level":"INFO","msg":"stream: started","id":"rvjybnig"}
+{"time":"2025-06-04T11:46:08.7330281+07:00","level":"INFO","msg":"handler: started","stream_id":"rvjybnig"}
+{"time":"2025-06-04T11:46:08.7330281+07:00","level":"INFO","msg":"sender: started","stream_id":"rvjybnig"}
+{"time":"2025-06-04T11:46:09.1030704+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T11:46:10.7821209+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T11:46:10.7831173+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T11:46:11.7852839+07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-rvjybnig-RandomForestConfusionMatrix","runtime_seconds":1.6484309000000001,"subtasks":[{"desc":"Random Forest Confusion Matrix.table.json","runtime_seconds":0.5790017,"progress":"521B/521B"}]}],"total_operations":1}}
+{"time":"2025-06-04T11:46:13.7142492+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T11:46:14.0525336+07:00","level":"INFO","msg":"stream: closing","id":"rvjybnig"}
+{"time":"2025-06-04T11:46:14.0525336+07:00","level":"INFO","msg":"handler: closed","stream_id":"rvjybnig"}
+{"time":"2025-06-04T11:46:14.0525336+07:00","level":"INFO","msg":"sender: closed","stream_id":"rvjybnig"}
+{"time":"2025-06-04T11:46:14.0525336+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rvjybnig"}
+{"time":"2025-06-04T11:46:14.053633+07:00","level":"INFO","msg":"stream: closed","id":"rvjybnig"}

@@ -1,0 +1,33 @@
+_wandb:
+    value:
+        cli_version: 0.19.11
+        m: []
+        python_version: 3.13.2
+        t:
+            "1":
+                - 5
+                - 50
+                - 53
+                - 55
+            "2":
+                - 5
+                - 50
+                - 53
+                - 55
+            "3":
+                - 16
+                - 23
+                - 55
+            "4": 3.13.2
+            "5": 0.19.11
+            "8":
+                - 3
+                - 5
+            "12": 0.19.11
+            "13": windows-amd64
+data:
+    value: '{''path'': ''data.csv''}'
+model:
+    value: '{''name'': ''logistic_regression'', ''C_values'': [0.01, 0.1, 1, 10, 100], ''solver_options'': [''lbfgs'', ''saga'', ''newton-cg''], ''max_iter_values'': [1000, 5000, 10000], ''n_estimators'': 100, ''max_depth'': None, ''n_neighbors'': 5, ''weights'': ''uniform''}'
+training:
+    value: '{''epochs'': 10}'

@@ -1,0 +1,15 @@
+{"time":"2025-06-04T11:06:17.8058548+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250604_110617-rtvst1vq\\logs\\debug-core.log"}
+{"time":"2025-06-04T11:06:18.2103995+07:00","level":"INFO","msg":"created new stream","id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:18.2103995+07:00","level":"INFO","msg":"stream: started","id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:18.2103995+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:18.2103995+07:00","level":"INFO","msg":"handler: started","stream_id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:18.2103995+07:00","level":"INFO","msg":"sender: started","stream_id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:18.5844333+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T11:06:26.1170129+07:00","level":"INFO","msg":"stream: closing","id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:26.1181861+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T11:06:26.1181861+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T11:06:27.0319814+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T11:06:27.3454777+07:00","level":"INFO","msg":"handler: closed","stream_id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:27.3454777+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:27.3454777+07:00","level":"INFO","msg":"sender: closed","stream_id":"rtvst1vq"}
+{"time":"2025-06-04T11:06:27.3459957+07:00","level":"INFO","msg":"stream: closed","id":"rtvst1vq"}

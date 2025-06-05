@@ -1,0 +1,16 @@
+{"time":"2025-06-04T11:08:02.4585217+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250604_110802-9havz9hc\\logs\\debug-core.log"}
+{"time":"2025-06-04T11:08:02.7328489+07:00","level":"INFO","msg":"created new stream","id":"9havz9hc"}
+{"time":"2025-06-04T11:08:02.7328489+07:00","level":"INFO","msg":"stream: started","id":"9havz9hc"}
+{"time":"2025-06-04T11:08:02.7328489+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"9havz9hc"}
+{"time":"2025-06-04T11:08:02.7328489+07:00","level":"INFO","msg":"handler: started","stream_id":"9havz9hc"}
+{"time":"2025-06-04T11:08:02.7328489+07:00","level":"INFO","msg":"sender: started","stream_id":"9havz9hc"}
+{"time":"2025-06-04T11:08:03.1081021+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T11:08:04.1565545+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T11:08:04.1565545+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T11:08:05.1700774+07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-9havz9hc-LogisticRegressionConfusionMatrix","runtime_seconds":1.2462578,"subtasks":[{"desc":"Logistic Regression Confusion Matrix.table.json","runtime_seconds":0.1503002,"progress":"521B/521B"}]},{"desc":"uploading config.yaml","runtime_seconds":0.4137366,"progress":"585B/585B"}],"total_operations":2}}
+{"time":"2025-06-04T11:08:06.462636+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T11:08:06.8186306+07:00","level":"INFO","msg":"stream: closing","id":"9havz9hc"}
+{"time":"2025-06-04T11:08:06.8196272+07:00","level":"INFO","msg":"handler: closed","stream_id":"9havz9hc"}
+{"time":"2025-06-04T11:08:06.8196272+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9havz9hc"}
+{"time":"2025-06-04T11:08:06.8196272+07:00","level":"INFO","msg":"sender: closed","stream_id":"9havz9hc"}
+{"time":"2025-06-04T11:08:06.8196272+07:00","level":"INFO","msg":"stream: closed","id":"9havz9hc"}

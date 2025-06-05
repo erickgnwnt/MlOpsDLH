@@ -1,0 +1,16 @@
+{"time":"2025-06-04T11:06:22.3341342+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250604_110622-8s11zepy\\logs\\debug-core.log"}
+{"time":"2025-06-04T11:06:22.6045579+07:00","level":"INFO","msg":"created new stream","id":"8s11zepy"}
+{"time":"2025-06-04T11:06:22.6045579+07:00","level":"INFO","msg":"stream: started","id":"8s11zepy"}
+{"time":"2025-06-04T11:06:22.6045579+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"8s11zepy"}
+{"time":"2025-06-04T11:06:22.6045579+07:00","level":"INFO","msg":"handler: started","stream_id":"8s11zepy"}
+{"time":"2025-06-04T11:06:22.6045579+07:00","level":"INFO","msg":"sender: started","stream_id":"8s11zepy"}
+{"time":"2025-06-04T11:06:22.9971798+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T11:06:24.593086+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T11:06:24.593086+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T11:06:26.1170129+07:00","level":"INFO","msg":"stream: closing","id":"8s11zepy"}
+{"time":"2025-06-04T11:06:26.1181861+07:00","level":"WARN","msg":"sender: received Exit record more than once, ignoring"}
+{"time":"2025-06-04T11:06:26.5422721+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T11:06:26.8650836+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"8s11zepy"}
+{"time":"2025-06-04T11:06:26.8650836+07:00","level":"INFO","msg":"sender: closed","stream_id":"8s11zepy"}
+{"time":"2025-06-04T11:06:26.8650836+07:00","level":"INFO","msg":"handler: closed","stream_id":"8s11zepy"}
+{"time":"2025-06-04T11:06:26.8650836+07:00","level":"INFO","msg":"stream: closed","id":"8s11zepy"}

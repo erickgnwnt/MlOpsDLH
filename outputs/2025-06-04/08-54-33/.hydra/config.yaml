@@ -1,0 +1,24 @@
+training:
+  epochs: 10
+model:
+  name: logistic_regression
+  C_values:
+  - 0.01
+  - 0.1
+  - 1
+  - 10
+  - 100
+  solver_options:
+  - lbfgs
+  - saga
+  - newton-cg
+  max_iter_values:
+  - 1000
+  - 5000
+  - 10000
+  n_estimators: 100
+  max_depth: null
+  n_neighbors: 5
+  weights: uniform
+data:
+  path: data.csv

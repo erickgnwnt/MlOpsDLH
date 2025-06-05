@@ -1,0 +1,2 @@
+Error training KNN: The 'weights' parameter of KNeighborsClassifier must be a str among {'distance', 'uniform'}, a callable or None. Got ['uniform', 'distance'] instead.
+[34m[1mwandb[0m: Finishing previous runs because reinit is set to True.

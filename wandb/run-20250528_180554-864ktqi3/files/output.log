@@ -1,8 +1,0 @@
-Training model...
-Model saved as logistic_model.pkl
-
-Evaluating model performance...
-
-Cross-validation scores: [0.78125 0.71875 0.625   0.8125  0.71875]
-Mean CV Accuracy: 0.73125
-Standard Deviation: 0.06434768838116875

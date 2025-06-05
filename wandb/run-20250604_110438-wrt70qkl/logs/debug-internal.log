@@ -1,0 +1,16 @@
+{"time":"2025-06-04T11:04:38.5756998+07:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"C:\\Users\\Erick\\Desktop\\Project\\Jupyter\\DlhJupyterNotebook\\wandb\\run-20250604_110438-wrt70qkl\\logs\\debug-core.log"}
+{"time":"2025-06-04T11:04:38.8553148+07:00","level":"INFO","msg":"created new stream","id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:38.8553148+07:00","level":"INFO","msg":"stream: started","id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:38.8553148+07:00","level":"INFO","msg":"writer: Do: started","stream_id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:38.8553148+07:00","level":"INFO","msg":"handler: started","stream_id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:38.8553148+07:00","level":"INFO","msg":"sender: started","stream_id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:39.1637841+07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T11:04:39.3617955+07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T11:04:39.3617955+07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T11:04:40.3787052+07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.070589,"progress":"1.3KB/1.3KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.070589,"progress":"24B/24B"}],"total_operations":2}}
+{"time":"2025-06-04T11:04:40.9580906+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T11:04:41.2616297+07:00","level":"INFO","msg":"stream: closing","id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:41.2616297+07:00","level":"INFO","msg":"handler: closed","stream_id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:41.2616297+07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:41.2616297+07:00","level":"INFO","msg":"sender: closed","stream_id":"wrt70qkl"}
+{"time":"2025-06-04T11:04:41.2623678+07:00","level":"INFO","msg":"stream: closed","id":"wrt70qkl"}
