@@ -1,0 +1,8 @@
+# Mengabaikan Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Mengabaikan cache Python
+__pycache__/
+
+# Mengabaikan folder log dan metadata dari WandB
+wandb/
