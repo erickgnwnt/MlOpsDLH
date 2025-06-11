@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r requirement.txt
 
       - name: Linting (Flake8)
         run: |
@@ -48,7 +48,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r requirement.txt
 
       - name: Run ML Training
         run: |
