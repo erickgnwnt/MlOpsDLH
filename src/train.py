@@ -2,16 +2,22 @@ import hydra
 from omegaconf import DictConfig
 import joblib
 import time
+import os
 from data import DataProcessor
 from model import LogisticModel, RandomForestModel, KNNModel  # Corrected imports
+import numpy as np
+np.float_ = np.float64  
 
-@hydra.main(version_base=None, config_path=".", config_name="config")
+@hydra.main(version_base=None, config_path="../config", config_name="config")
 def main(cfg: DictConfig):
     start_time = time.time()  # Start timer
 
     # Data Processing
     data_processor = DataProcessor(cfg.data.path)
     X_train, X_test, y_train, y_test = data_processor.preprocess_data()
+
+    # ✅ Ensure models directory exists
+    os.makedirs("models", exist_ok=True)
 
     # Initialize Models
     models = {
@@ -21,13 +27,17 @@ def main(cfg: DictConfig):
                          weights=cfg.knn.weights if isinstance(cfg.knn.weights, str) else "uniform"),
     }
 
-    # 🔹 Train Models First
-    for model in models.values():
+    # 🔹 Train & Save Models
+    for name, model in models.items():
         model.train(X_train, y_train)
+
+        # ✅ Save trained model to disk
+        joblib.dump(model.model, f"models/{name.replace(' ', '_').lower()}.pkl")
+        print(f"✅ Model saved: models/{name.replace(' ', '_').lower()}.pkl")
 
     # 🔹 Evaluate Models in Parallel
     joblib.Parallel(n_jobs=-1)(
-        joblib.delayed(lambda model: model.evaluate(X_train, X_test, y_train, y_test))(model)
+        joblib.delayed(model.evaluate)(X_train, X_test, y_train, y_test)
         for model in models.values()
     )
 
