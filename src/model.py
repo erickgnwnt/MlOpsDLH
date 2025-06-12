@@ -1,6 +1,5 @@
 import wandb
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.linear_model import LogisticRegression
@@ -12,7 +11,6 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import cross_val_score
 from sklearn.preprocessing import label_binarize
-np.float = np.float64
 
 
 class BaseModel:

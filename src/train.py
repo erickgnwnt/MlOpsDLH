@@ -1,14 +1,10 @@
 import os
 import time
 import joblib
-import numpy as np
 import hydra
 from omegaconf import DictConfig
-
 from data import DataProcessor
 from model import LogisticModel, RandomForestModel, KNNModel
-
-np.float_ = np.float64
 
 
 @hydra.main(version_base=None, config_path="../config", config_name="config")
