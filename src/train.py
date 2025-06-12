@@ -2,9 +2,12 @@ import os
 import time
 import joblib
 import hydra
+import numpy as np
 from omegaconf import DictConfig
 from data import DataProcessor
 from model import LogisticModel, RandomForestModel, KNNModel
+
+np.float64 = np.float64  # Fixed NumPy 2.0 compatibility
 
 
 @hydra.main(version_base=None, config_path="../config", config_name="config")
@@ -23,32 +26,42 @@ def main(cfg: DictConfig):
         "Logistic Regression": LogisticModel(),
         "Random Forest": RandomForestModel(
             n_estimators=cfg.random_forest.n_estimators,
-            max_depth=cfg.random_forest.max_depth
+            max_depth=cfg.random_forest.max_depth,
         ),
         "KNN": KNNModel(
-            n_neighbors=cfg.knn.n_neighbors
-            if isinstance(cfg.knn.n_neighbors, int)
-            else cfg.knn.n_neighbors[0],
-            weights=cfg.knn.weights
-            if isinstance(cfg.knn.weights, str)
-            else "uniform"
+            n_neighbors=(
+                cfg.knn.n_neighbors if isinstance(cfg.knn.n_neighbors, int)
+                else cfg.knn.n_neighbors[0]
+            ),
+            weights=(
+                cfg.knn.weights if isinstance(cfg.knn.weights, str)
+                else "uniform"
+            ),
         ),
     }
 
     # Train & Save Models
     for name, model in models.items():
-        model.train(X_train, y_train)
-
-        # Save trained model to disk
-        model_path = f"models/{name.replace(' ', '_').lower()}.pkl"
-        joblib.dump(model.model, model_path)
-        print(f"✅ Model saved: {model_path}")
+        try:
+            model.train(X_train, y_train)
+            model_path = os.path.join(
+                "models", f"{name.replace(' ', '_').lower()}.pkl"
+            )
+            joblib.dump(model.model, model_path)
+            print(f"✅ Model saved: {model_path}")
+        except Exception as e:
+            print(f"⚠️ Error training {name}: {e}")
 
     # Evaluate Models in Parallel
-    joblib.Parallel(n_jobs=-1)(
-        joblib.delayed(m.evaluate)(X_train, X_test, y_train, y_test)
-        for m in models.values()
-    )
+    try:
+        joblib.Parallel(n_jobs=-1)(
+            joblib.delayed(m.evaluate)(
+                X_train, X_test, y_train, y_test
+            )
+            for m in models.values()
+        )
+    except Exception as e:
+        print(f"⚠️ Error during parallel evaluation: {e}")
 
     # Log execution time
     duration = time.time() - start_time

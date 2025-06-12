@@ -22,7 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirement.txt
+          pip install -r requirements.txt
+          python -c "import wandb, numpy, pandas, sklearn" || exit 1
 
       - name: Linting (Flake8)
         run: |
@@ -43,14 +44,18 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirement.txt
+          pip install -r requirements.txt
+          python -c "import wandb, numpy, pandas, sklearn" || exit 1
 
       - name: Run ML Training
         run: |
-          python src/train.py
+          python src/train.py || exit 1
 
       - name: Save Model as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: trained-model
           path: models/model.pkl
+
+      - name: Deploy Model (Placeholder)
+        run: echo "Deploy model logic goes here!"
