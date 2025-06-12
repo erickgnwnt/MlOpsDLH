@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build-test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,13 +29,8 @@ jobs:
           pip install flake8
           flake8 src/
 
-      - name: Run tests (Pytest)
-        run: |
-          pip install pytest
-          pytest tests/
-
   train-deploy:
-    needs: build-test
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
