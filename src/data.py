@@ -19,12 +19,14 @@ class DataProcessor:
             df = pd.read_csv(self.filepath)
 
             # Convert features & target to numeric, handling errors
-            df[self.features] = df[self.features].apply(pd.to_numeric, errors="coerce")
+            df[self.features] = df[self.features].apply(
+                pd.to_numeric, errors="coerce"
+            )
             df[self.target] = pd.to_numeric(df[self.target], errors="coerce")
 
             # Log missing values
             missing_values = df.isnull().sum()
-            print(f"🔍 Missing values before cleaning:\n{missing_values}")
+            print("🔍 Missing values before cleaning:\n", missing_values)
 
             # Drop rows with missing target or features
             df_clean = df.dropna(subset=self.features + [self.target])
@@ -41,21 +43,17 @@ class DataProcessor:
         X, y = self.load_data()
         if X is None or y is None:
             print("🚨 Data loading failed. Returning None.")
-            return None, None, None, None  # Prevent unpacking error
+            return None, None, None, None
 
-        # Split into train & test sets
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=0.2, random_state=42
         )
 
-        # Scale the features
         X_train_scaled = self.scaler.fit_transform(X_train)
         X_test_scaled = self.scaler.transform(X_test)
 
-        # ✅ Ensure processed data directory exists
         os.makedirs("data/processed", exist_ok=True)
 
-        # ✅ Save processed data for later use
         df_train = pd.DataFrame(X_train_scaled, columns=self.features)
         df_train[self.target] = y_train
         df_train.to_csv("data/processed/train.csv", index=False)
@@ -64,9 +62,12 @@ class DataProcessor:
         df_test[self.target] = y_test
         df_test.to_csv("data/processed/test.csv", index=False)
 
-        print(f"✅ Preprocessed data saved:\n"
-              f" - Training: data/processed/train.csv ({len(df_train)} samples)\n"
-              f" - Test: data/processed/test.csv ({len(df_test)} samples)")
+        print(
+            f"✅ Preprocessed data saved:\n"
+            f" - Train: train.csv ({len(df_train)})\n"
+            f" - Test: data/processed/test.csv "
+            f"({len(df_test)} samples)"
+        )
 
         return X_train_scaled, X_test_scaled, y_train, y_test
 

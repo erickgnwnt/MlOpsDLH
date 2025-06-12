@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-np.float_ = np.float64
-
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -15,6 +12,7 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import cross_val_score
 from sklearn.preprocessing import label_binarize
+np.float_ = np.float64
 
 
 class BaseModel:
@@ -62,7 +60,9 @@ class BaseModel:
 
             plt.figure(figsize=(7, 4))
             sns.heatmap(df_cm, annot=True, cmap="Blues", fmt="d")
-            wandb.log({f"{self.name} Confusion Matrix": wandb.Image(plt.gcf())})
+            wandb.log({
+                f"{self.name} Confusion Matrix": wandb.Image(plt.gcf())
+            })
             plt.close()
 
             wandb.log({
@@ -73,7 +73,9 @@ class BaseModel:
 
             if hasattr(self.model, "predict_proba"):
                 y_probs = self.model.predict_proba(X_test)
-                y_test_bin = label_binarize(y_test, classes=list(range(self.num_classes)))
+                y_test_bin = label_binarize(
+                    y_test, classes=list(range(self.num_classes))
+                )
 
                 pr_auc_scores = {}
                 for i in range(self.num_classes):
@@ -82,16 +84,18 @@ class BaseModel:
                     )
                     pr_auc = auc(recall, precision)
                     pr_auc_scores[f"Class {i} PR AUC"] = pr_auc
-
                     plt.figure()
-                    plt.plot(recall, precision, marker=".", label=f"AUC={pr_auc:.3f}")
+                    plt.plot(
+                        recall,
+                        precision,
+                        marker=".",
+                        label=f"AUC={pr_auc:.3f}"
+                    )
                     plt.xlabel("Recall")
                     plt.ylabel("Precision")
                     plt.title(f"{self.name} Class {i} Precision-Recall Curve")
                     plt.legend()
-                    wandb.log({f"{self.name} Class {i} PR Curve": wandb.Image(plt.gcf())})
                     plt.close()
-
                 wandb.log(pr_auc_scores)
 
                 roc_auc_scores = {}
@@ -106,27 +110,35 @@ class BaseModel:
                     plt.ylabel("True Positive Rate")
                     plt.title(f"{self.name} Class {i} ROC Curve")
                     plt.legend()
-                    wandb.log({f"{self.name} Class {i} ROC Curve": wandb.Image(plt.gcf())})
+                    wandb.log({
+                        f"{self.name} Class {i} ROC": wandb.Image(plt.gcf())
+                    })
                     plt.close()
 
                 wandb.log(roc_auc_scores)
 
             if isinstance(self.model, RandomForestClassifier):
                 feature_importance = pd.DataFrame({
-                    "Feature": [f"Feature {i}" for i in range(X_train.shape[1])],
+                    "Feature": [
+                        f"Feature {i}" for i in range(X_train.shape[1])
+                    ],
                     "Importance": self.model.feature_importances_
                 }).sort_values(by="Importance", ascending=False)
 
                 wandb.log({
-                    f"{self.name} Feature Importance": wandb.Table(dataframe=feature_importance)
+                    f"{self.name} Feature Importance": wandb.Table(
+                        dataframe=feature_importance
+                    )
                 })
 
         except Exception as e:
             print(f"⚠️ Error during evaluation for {self.name}: {e}")
-            wandb.log({
-                f"{self.name} Evaluation Error": wandb.Html(f"<pre>{str(e)}</pre>")
-            })
 
+            wandb.log({
+                f"{self.name} Evaluation Error": wandb.Html(
+                    f"<pre>{str(e)}</pre>"
+                )
+            })
         wandb.finish()
 
 
