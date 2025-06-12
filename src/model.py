@@ -12,7 +12,7 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import cross_val_score
 from sklearn.preprocessing import label_binarize
-np.float_ = np.float64
+np.float = np.float64
 
 
 class BaseModel:
