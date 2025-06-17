@@ -44,7 +44,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r requirement.txt
           python -c "import wandb, numpy, pandas, sklearn" || exit 1
 
       - name: Run ML Training
