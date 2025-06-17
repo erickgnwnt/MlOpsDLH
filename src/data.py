@@ -3,6 +3,11 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
+WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+if WANDB_API_KEY:
+    import wandb
+    wandb.login(key=WANDB_API_KEY)
+
 
 class DataProcessor:
     def __init__(self, filepath):

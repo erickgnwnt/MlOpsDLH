@@ -7,6 +7,12 @@ from omegaconf import DictConfig
 from data import DataProcessor
 from model import LogisticModel, RandomForestModel, KNNModel
 
+# WANDB API Key for authentication
+WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+if WANDB_API_KEY:
+    import wandb
+    wandb.login(key=WANDB_API_KEY)
+
 np.float64 = np.float64  # Fixed NumPy 2.0 compatibility
 
 

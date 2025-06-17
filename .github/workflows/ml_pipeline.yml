@@ -57,6 +57,9 @@ jobs:
           pip install --prefer-binary -r requirement.txt
           python -c "import wandb, numpy, pandas, sklearn" || exit 1
 
+      - name: Set WANDB API Key
+        run: echo "WANDB_API_KEY=${{ secrets.WANDB_API_KEY }}" >> $GITHUB_ENV
+
       - name: Run ML Training
         run: |
           python src/train.py || exit 1

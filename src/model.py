@@ -1,3 +1,4 @@
+import os
 import wandb
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11,6 +12,10 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import cross_val_score
 from sklearn.preprocessing import label_binarize
+
+WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+if WANDB_API_KEY:
+    wandb.login(key=WANDB_API_KEY)
 
 
 class BaseModel:

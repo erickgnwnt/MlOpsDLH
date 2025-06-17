@@ -1,6 +1,12 @@
+import os
 import numpy as np
 from data import DataProcessor
 from model import LogisticModel
+
+WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+if WANDB_API_KEY:
+    import wandb
+    wandb.login(key=WANDB_API_KEY)
 
 
 class Inference:
