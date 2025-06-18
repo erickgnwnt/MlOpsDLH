@@ -1,4 +1,4 @@
-# Mengabaikan Jupyter Notebook checkpoints
+# Mengabaikan file sementara Jupyter Notebook
 .ipynb_checkpoints/
 
 # Mengabaikan cache Python
@@ -6,3 +6,4 @@ __pycache__/
 
 # Mengabaikan folder log dan metadata dari WandB
 wandb/
+outputs/
