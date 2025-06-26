@@ -3,6 +3,7 @@ import wandb
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import mord
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -70,7 +71,7 @@ class BaseModel:
 
             wandb.log({
                 f"{self.name} Classification Report": classification_report(
-                    y_test, y_test_pred, output_dict=True
+                    y_test, y_test_pred, output_dict=True, zero_division=0
                 )
             })
 
@@ -134,6 +135,9 @@ class BaseModel:
                     )
                 })
 
+            # Log model hyperparameters
+            wandb.log({f"{self.name} Hyperparameters": self.model.get_params()})
+
         except Exception as e:
             print(f"⚠️ Error during evaluation for {self.name}: {e}")
 
@@ -171,4 +175,12 @@ class KNNModel(BaseModel):
         super().__init__(
             KNeighborsClassifier(n_neighbors=n_neighbors, weights=weights),
             "KNN", num_classes
+        )
+
+
+class OrdinalLogisticModel(BaseModel):
+    def __init__(self, num_classes=3):
+        super().__init__(
+            mord.LogisticIT(),
+            "Ordinal Logistic Regression", num_classes
         )
