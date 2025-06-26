@@ -24,6 +24,11 @@ def main(cfg: DictConfig):
     data_processor = DataProcessor(cfg.data.path)
     X_train, X_test, y_train, y_test = data_processor.preprocess_data()
 
+    # Save fitted scaler for inference
+    scaler_path = os.path.join("models", "scaler.pkl")
+    joblib.dump(data_processor.scaler, scaler_path)
+    print(f"✅ Scaler saved: {scaler_path}")
+
     # Ensure models directory exists
     os.makedirs("models", exist_ok=True)
 
