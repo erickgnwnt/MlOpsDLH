@@ -5,7 +5,7 @@ import hydra
 import numpy as np
 from omegaconf import DictConfig
 from data import DataProcessor
-from model import LogisticModel, RandomForestModel, KNNModel
+from model import LogisticModel, RandomForestModel, KNNModel, OrdinalLogisticModel
 
 # WANDB API Key for authentication
 WANDB_API_KEY = os.getenv("WANDB_API_KEY")
@@ -23,6 +23,11 @@ def main(cfg: DictConfig):
     # Data Processing
     data_processor = DataProcessor(cfg.data.path)
     X_train, X_test, y_train, y_test = data_processor.preprocess_data()
+
+    # Save fitted scaler for inference
+    scaler_path = os.path.join("models", "scaler.pkl")
+    joblib.dump(data_processor.scaler, scaler_path)
+    print(f"✅ Scaler saved: {scaler_path}")
 
     # Ensure models directory exists
     os.makedirs("models", exist_ok=True)
@@ -44,6 +49,7 @@ def main(cfg: DictConfig):
                 else "uniform"
             ),
         ),
+        "Ordinal Logistic Regression": OrdinalLogisticModel(),
     }
 
     # Train & Save Models
@@ -55,6 +61,9 @@ def main(cfg: DictConfig):
             )
             joblib.dump(model.model, model_path)
             print(f"✅ Model saved: {model_path}")
+            # Print model hyperparameters to console
+            print(f"\n🔧 {name} Hyperparameters:")
+            print(model.model.get_params())
         except Exception as e:
             print(f"⚠️ Error training {name}: {e}")
 

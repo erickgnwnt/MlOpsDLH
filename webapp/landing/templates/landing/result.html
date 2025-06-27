@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction Result</title>
+    <link rel="stylesheet" href="{% static 'landing/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Water Quality Prediction Result</h1>
+        <p>Status: {{ status }}</p>
+        <a href="{% url 'landing:index' %}">Back to Prediction</a>
+        <p>Status: {{ status }}</p>
+<p>Confidence: {{ confidence }}</p>
+        <p>Model Version: {{ model_version }}</p>
+        <p>Timestamp: {{ timestamp }}</p>
+        <p>Prediction Time: {{ prediction_time }}</p>
+        <p>Model Name: {{ model_name }}</p>
+        <p>Model Type: {{ model_type }}</p>
+        <p>Model Description: {{ model_description }}</p>
+    </div>
+</body>
+</html>
+<!-- This is the result page that displays the prediction status -->
+<!-- It shows whether the water quality is good or bad based on the model's prediction -->
