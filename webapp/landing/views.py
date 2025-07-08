@@ -57,8 +57,30 @@ def landing(request):
                 'status': status_map.get(pred[0], 'Unknown'),
                 'confidence': f"{confidence*100:.2f}%" if confidence is not None else 'N/A'
             }
+        # Feature importance hanya untuk Random Forest
+        feature_importance = None
+        if "Random Forest" in models:
+            rf_model = models["Random Forest"]
+            if hasattr(rf_model, "feature_importances_"):
+                feature_importance = list(zip(
+                    ["TSS", "DO", "BOD", "COD", "Fosfat", "Fecal Coli", "Total-Coliform"],
+                    rf_model.feature_importances_
+                ))
+                feature_importance.sort(key=lambda x: x[1], reverse=True)
+        # Koefisien untuk Logistic Regression
+        logreg_coeff = None
+        if "Logistic Regression" in models:
+            logreg_model = models["Logistic Regression"]
+            if hasattr(logreg_model, "coef_"):
+                logreg_coeff = list(zip(
+                    ["TSS", "DO", "BOD", "COD", "Fosfat", "Fecal Coli", "Total-Coliform"],
+                    logreg_model.coef_[0]
+                ))
+                logreg_coeff.sort(key=lambda x: abs(x[1]), reverse=True)
         return render(request, 'landing/result.html', {
-            'results': results
+            'results': results,
+            'feature_importance': feature_importance,
+            'logreg_coeff': logreg_coeff
         })
 
     return render(request, 'landing/index.html')
