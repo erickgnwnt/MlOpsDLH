@@ -10,10 +10,31 @@
 <body>
     <div class="container">
         <h1>Water Quality Prediction Result</h1>
-        <p>Status: {{ status }}</p>
+        <h2>Hasil Prediksi dari Semua Model:</h2>
+        <ul>
+        {% for name, result in results.items %}
+            <li><b>{{ name }}</b>: {{ result.status }} (Confidence: {{ result.confidence }})</li>
+        {% endfor %}
+        </ul>
+        {% if feature_importance %}
+        <h3>Feature Importance (Random Forest):</h3>
+        <ul>
+        {% for name, score in feature_importance %}
+            <li><b>{{ name }}</b>: {{ score|floatformat:3 }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+        {% if logreg_coeff %}
+        <h3>Feature Coefficient (Logistic Regression):</h3>
+        <ul>
+        {% for name, coef in logreg_coeff %}
+            <li><b>{{ name }}</b>: {{ coef|floatformat:3 }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
         <a href="{% url 'landing:index' %}">Back to Prediction</a>
         <p>Status: {{ status }}</p>
-<p>Confidence: {{ confidence }}</p>
+        <p>Confidence: {{ confidence }}</p>
         <p>Model Version: {{ model_version }}</p>
         <p>Timestamp: {{ timestamp }}</p>
         <p>Prediction Time: {{ prediction_time }}</p>

@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from imblearn.over_sampling import SMOTE
 
 WANDB_API_KEY = os.getenv("WANDB_API_KEY")
 if WANDB_API_KEY:
@@ -36,6 +37,9 @@ class DataProcessor:
             # Drop rows with missing target or features
             df_clean = df.dropna(subset=self.features + [self.target])
 
+            # Baru konversi target ke int setelah dropna
+            df_clean[self.target] = df_clean[self.target].astype(int)
+
             print(f"✅ Loaded dataset with {len(df_clean)} samples.")
             return df_clean[self.features], df_clean[self.target]
 
@@ -44,14 +48,19 @@ class DataProcessor:
             return None, None
 
     def preprocess_data(self):
-        """Preprocess data, split, and save scaled values."""
+        """Preprocess data, apply SMOTE, split, and save scaled values."""
         X, y = self.load_data()
         if X is None or y is None:
             print("🚨 Data loading failed. Returning None.")
             return None, None, None, None
 
+        # Apply SMOTE to balance classes
+        smote = SMOTE(random_state=42)
+        X_resampled, y_resampled = smote.fit_resample(X, y)
+        print(f"✅ Applied SMOTE: {len(y)} -> {len(y_resampled)} samples")
+
         X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=42
+            X_resampled, y_resampled, test_size=0.2, random_state=42
         )
 
         X_train_scaled = self.scaler.fit_transform(X_train)

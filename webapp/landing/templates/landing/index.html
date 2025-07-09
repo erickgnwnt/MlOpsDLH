@@ -9,32 +9,52 @@
 </head>
 <body>
     <div class="container">
-        <h1>Water Quality Prediction</h1>
+        <h1 style="display:flex;align-items:center;justify-content:center;gap:10px;">
+            <img src="{% static 'landing/leaf.svg' %}" alt="Leaf" style="height:2em;vertical-align:middle;">
+            Water Quality Prediction
+        </h1>
         <form method="post">
             {% csrf_token %}
-            <label for="tss">Total Suspended Solids (TSS):</label>
-            <input type="number" name="tss" step="any" required>
-
-            <label for="do">Dissolved Oxygen (DO):</label>
-            <input type="number" name="do" step="any" required>
-
-            <label for="bod">Biochemical Oxygen Demand (BOD):</label>
-            <input type="number" name="bod" step="any" required>
-
-            <label for="cod">Chemical Oxygen Demand (COD):</label>
-            <input type="number" name="cod" step="any" required>
-
-            <label for="fosfat">Fosfat:</label>
-            <input type="number" name="fosfat" step="any" required>
-
-            <label for="fecal_coli">Fecal Coliform:</label>
-            <input type="number" name="fecal_coli" step="any" required>
-
-            <label for="total_coliform">Total Coliform:</label>
-            <input type="number" name="total_coliform" step="any" required>
-
+            <div class="form-group">
+                <label for="tss">Total Suspended Solids (TSS):</label>
+                <input type="number" name="tss" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="do">Dissolved Oxygen (DO):</label>
+                <input type="number" name="do" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="bod">Biochemical Oxygen Demand (BOD):</label>
+                <input type="number" name="bod" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="cod">Chemical Oxygen Demand (COD):</label>
+                <input type="number" name="cod" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="fosfat">Fosfat:</label>
+                <input type="number" name="fosfat" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="fecal_coli">Fecal Coliform:</label>
+                <input type="number" name="fecal_coli" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="total_coliform">Total Coliform:</label>
+                <input type="number" name="total_coliform" step="any" required>
+            </div>
             <button type="submit">Predict</button>
         </form>
     </div>
+
+    <script>
+        fecalcoliform = document.querySelector('input[name="fecal_coli"]');
+        fecalcoliform.addEventListener('input', function() {
+            if (this.value < 0) {
+                this.value = 0; // Prevent negative values
+            }
+        });
+        
+        // Optional: Add any JavaScript functionality if needed
 </body>
 </html>
