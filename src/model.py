@@ -135,12 +135,8 @@ class BaseModel:
                     )
                 })
 
-            # Log model hyperparameters
-            wandb.log({f"{self.name} Hyperparameters": self.model.get_params()})
-
         except Exception as e:
             print(f"⚠️ Error during evaluation for {self.name}: {e}")
-
             wandb.log({
                 f"{self.name} Evaluation Error": wandb.Html(
                     f"<pre>{str(e)}</pre>"
