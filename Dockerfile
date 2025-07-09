@@ -5,8 +5,8 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Salin requirements dan install dependencies
-COPY requirements.txt ./
-RUN pip install --upgrade pip && pip install -r requirements.txt
+COPY requirement.txt ./
+RUN pip install --upgrade pip && pip install -r requirement.txt
 
 # Salin semua file project ke container
 COPY . .
