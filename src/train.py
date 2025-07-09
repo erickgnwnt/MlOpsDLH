@@ -5,7 +5,8 @@ import hydra
 import numpy as np
 from omegaconf import DictConfig
 from data import DataProcessor
-from model import LogisticModel, RandomForestModel, KNNModel, OrdinalLogisticModel
+from model import LogisticModel, RandomForestModel
+from model import KNNModel, OrdinalLogisticModel
 
 # WANDB API Key for authentication
 WANDB_API_KEY = os.getenv("WANDB_API_KEY")
