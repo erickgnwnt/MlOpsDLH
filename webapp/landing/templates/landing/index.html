@@ -46,5 +46,15 @@
             <button type="submit">Predict</button>
         </form>
     </div>
+
+    <script>
+        fecalcoliform = document.querySelector('input[name="fecal_coli"]');
+        fecalcoliform.addEventListener('input', function() {
+            if (this.value < 0) {
+                this.value = 0; // Prevent negative values
+            }
+        });
+        
+        // Optional: Add any JavaScript functionality if needed
 </body>
 </html>
