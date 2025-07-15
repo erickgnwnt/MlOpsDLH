@@ -24,4 +24,4 @@ EXPOSE 8000
 ENV PYTHONPATH="/app:/app/src:/app/webapp"
 
 # Perintah start (ganti sesuai struktur project Anda)
-CMD gunicorn webapp.webapp.wsgi:application --bind 0.0.0.0:8000
+CMD gunicorn webapp.wsgi:application --bind 0.0.0.0:8000
