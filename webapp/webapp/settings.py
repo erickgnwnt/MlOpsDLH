@@ -25,7 +25,13 @@ SECRET_KEY = 'django-insecure-*z4s%%cib#70zoytti+k*hql7l-exr=24k@*8551_p@z3z@dq-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'mlopsdlh-production.up.railway.app',
+    'localhost',
+    '127.0.0.1',
+    '[::1]',
+    # Tambahkan domain custom Anda di sini jika sudah ada
+]
 
 
 # Application definition
