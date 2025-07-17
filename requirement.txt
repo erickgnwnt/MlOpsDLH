@@ -11,3 +11,4 @@ wandb>=0.15
 gunicorn
 Django>=3.2
 mord
+whitenoise
