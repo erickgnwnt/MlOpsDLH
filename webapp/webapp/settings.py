@@ -27,10 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'mlopsdlh-production.up.railway.app',
+    'water-prediction-itenas.com',
     'localhost',
     '127.0.0.1',
     '[::1]',
-    # Tambahkan domain custom Anda di sini jika sudah ada
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://mlopsdlh-production.up.railway.app',
+    'https://water-prediction-itenas.com',
 ]
 
 
