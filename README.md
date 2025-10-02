@@ -1,3 +1,0 @@
-# DlhJupyterNotebook
-
-ML pipeline project.
