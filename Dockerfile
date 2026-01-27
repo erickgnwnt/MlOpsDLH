@@ -15,7 +15,7 @@ COPY . .
 RUN ls -lR /app/webapp/webapp
 
 # Jalankan collectstatic jika pakai Django staticfiles
-RUN python webapp/manage.py collectstatic --noinput || true
+RUN python manage.py collectstatic --noinput || true
 
 # Expose port Railway (Railway pakai $PORT env var)
 EXPOSE 8000

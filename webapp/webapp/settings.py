@@ -23,14 +23,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*z4s%%cib#70zoytti+k*hql7l-exr=24k@*8551_p@z3z@dq-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'mlopsdlh-production.up.railway.app',
+    'water-prediction-itenas.com',
     'localhost',
     '127.0.0.1',
     '[::1]',
-    # Tambahkan domain custom Anda di sini jika sudah ada
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://mlopsdlh-production.up.railway.app',
+    'https://water-prediction-itenas.com',
 ]
 
 
@@ -48,6 +53,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -124,6 +130,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
