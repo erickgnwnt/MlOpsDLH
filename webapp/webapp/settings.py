@@ -33,9 +33,9 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    'https://mlopsdlh-production.up.railway.app',
-    'https://water-prediction-itenas.com',
-    os.environ.get('RAILWAY_DOMAIN', '').replace('.up.railway.app', '').split('.')[0] if os.environ.get('RAILWAY_DOMAIN') else '',
+    "https://mlopsdlh-production-9d79.up.railway.app",
+    "http://localhost",
+    "http://127.0.0.1",
 ]
 
 
