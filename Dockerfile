@@ -14,14 +14,15 @@ COPY . .
 # Debug: cek isi folder webapp/webapp di dalam container
 RUN ls -lR /app/webapp/webapp
 
-# Jalankan collectstatic jika pakai Django staticfiles
+# Set PYTHONPATH agar Python bisa menemukan webapp package
+ENV PYTHONPATH="/app:/app/src:/app/webapp"
+
+# Jalankan collectstatic dari webapp directory
+WORKDIR /app/webapp
 RUN python manage.py collectstatic --noinput || true
 
 # Expose port Railway (Railway pakai $PORT env var)
 EXPOSE 8000
 
-# Set PYTHONPATH agar Python bisa menemukan webapp package
-ENV PYTHONPATH="/app:/app/src:/app/webapp"
-
-# Perintah start (ganti sesuai struktur project Anda)
+# Perintah start (run from webapp directory)
 CMD gunicorn webapp.wsgi:application --bind 0.0.0.0:8000
